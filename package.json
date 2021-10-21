@@ -1,0 +1,22 @@
+{
+  "name": "vladrafli.github.io",
+  "version": "1.0.0",
+  "description": "This repository used to store my static portfolio website that I used for profesional purpose.",
+  "main": "index.js",
+  "scripts": {
+    "watch": "npx tailwindcss --postcss -w -i ./src/css/tailwind.css -o ./dist/style.css",
+    "build": "npx tailwindcss --postcss -i ./src/css/tailwind.css -o ./dist/style.css"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/jquery": "^3.5.7",
+    "@types/tailwindcss": "^2.2.1",
+    "autoprefixer": "^10.3.7",
+    "postcss": "^8.3.9",
+    "postcss-import": "^14.0.2",
+    "tailwindcss": "^2.2.17",
+    "webpack": "^5.58.2"
+  }
+}
