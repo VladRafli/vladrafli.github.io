@@ -32,7 +32,7 @@
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Raleway:wghy@500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@500&display=swap" rel="stylesheet">
 </head>
 
 <body class="transition-all flex justify-center bg-orange-50 dark:bg-gray-800 dark:text-white"
@@ -140,6 +140,7 @@
         jQuery(() => {
             if (localStorage.getItem('isDarkMode') === null) {
                 localStorage.setItem('isDarkMode', 'true');
+                $('html').addClass('dark');
                 $('.dark-mode').html(lightMode);
             } else if (localStorage.getItem('isDarkMode') === 'true') {
                 $('.dark-mode').html(lightMode);
