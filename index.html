@@ -102,7 +102,7 @@
                     <img src="dist/img/EdwinConsultantSS.png" alt="Edwin Consultant" class="mb-3">
                     <h1 class="text-xl font-bold">Edwin Consultant</h1>
                     <p>Website for Edwin Consultant Firm</p>
-                    <a class="my-4 py-2 transition-colors bg-teal-400 hover:bg-teal-300 dark:bg-blueGray-500 dark:hover:bg-blueGray-400" href="https://edwinconsultant.com">Go to website</a>
+                    <a class="my-4 py-2 rounded-lg transition-colors bg-teal-400 hover:bg-teal-300 dark:bg-blueGray-500 dark:hover:bg-blueGray-400" href="https://edwinconsultant.com" target="_blank" rel="noopener noreferrer">Go to website</a>
                 </div>
                 <div class="text-center flex flex-col">
                     <img src="dist/img/VotingSS.png" alt="Webvoting Website" class="mb-3">
@@ -116,20 +116,21 @@
                     style="width: fit-content;">Presence</h1>
             <ul class="my-6 text-xl" style="width: fit-content;">
                 <li class="px-4 py-2 rounded-lg transition-colors hover:bg-opacity-30 hover:bg-teal-300">
-                    <a href="https://github.com/VladRafli"><i class="fab fa-github mr-2"></i> @VladRafli</a>
+                    <a href="https://github.com/VladRafli" target="_blank" rel="noopener noreferrer"><i class="fab fa-github mr-2"></i> @VladRafli</a>
                 </li>
                 <li class="px-4 py-2 rounded-lg transition-colors hover:bg-opacity-30 hover:bg-teal-300">
-                    <a href="https://twitter.com/rafli_jaskandi"><i class="fab fa-twitter mr-2"></i> @rafli_jaskandi</a>
+                    <a href="https://twitter.com/rafli_jaskandi" target="_blank" rel="noopener noreferrer"><i class="fab fa-twitter mr-2"></i> @rafli_jaskandi</a>
                 </li>
                 <li class="px-4 py-2 rounded-lg transition-colors hover:bg-opacity-30 hover:bg-teal-300">
-                    <a href="https://www.instagram.com/rafli_jaskandi/"><i class="fab fa-instagram mr-2"></i> @rafli_jaskandi</a>
+                    <a href="https://www.instagram.com/rafli_jaskandi/" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram mr-2"></i> @rafli_jaskandi</a>
                 </li>
             </ul>
             <form class="my-6 flex flex-col text-black" method="post" enctype="text/plain">
-                <input class="my-3 p-3 rounded-lg" type="text" name="email" id="email" placeholder="Email">
+                <h1 class="mb-6 pl-3 pr-12 text-3xl font-bold border-b-4 border-teal-400 dark:border-blueGray-500"
+                    style="width: fit-content;">Mail me!</h1>
                 <input class="my-3 p-3 rounded-lg" type="text" name="subject" id="subject" placeholder="Subject">
                 <textarea class="my-3 p-3 rounded-lg" name="content" id="content" cols="30" rows="10" placeholder="Content"></textarea>
-                <button class="my-3 px-4 py-2 rounded-lg transition-colors bg-teal-400 hover:bg-teal-300" type="submit">Mail me!</button>
+                <button class="my-3 px-4 py-2 rounded-lg transition-colors bg-teal-400 hover:bg-teal-300" type="submit">Send</button>
             </form>
         </section>
     </main>
@@ -157,6 +158,12 @@
                     $('html').addClass('dark');
                 }
             });
+            $('.contact > form').on('submit', (e) => {
+                e.preventDefault();
+                let form = $('.contact > form').serializeArray();
+                console.log(form);
+                window.location = `mailto:rafli.jaskandi@gmail.com?subject=${form[0].value}&body=${form[1].value}`
+            })
         });
     </script>
     <!-- <script src="./dist/script.js"></script> -->
